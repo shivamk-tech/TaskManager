@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="icon"
+        href="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3e%3cdefs%3e%3clinearGradient id='favGrad' x1='0' y1='0' x2='1' y2='1'%3e%3cstop offset='0%25' stop-color='%23818cf8'/%3e%3cstop offset='100%25' stop-color='%23c084fc'/%3e%3c/linearGradient%3e%3c/defs%3e%3ccircle cx='16' cy='16' r='16' fill='url(%23favGrad)'/%3e%3cpath d='M9 16l5 5l9-9' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- LANDING PAGE -->
+    <div class="landing-page" id="landingPage">
+        <nav class="landing-nav">
+            <div class="landing-logo"><i class="fa-solid fa-check-double"></i> TaskMaster</div>
+            <ul class="landing-nav-links">
+                <li><a href="#" id="landingAboutBtn">About</a></li>
+                <li><a href="#" id="landingContactBtn">Contact</a></li>
+                <li><a href="#" id="landingHelpBtn">Help</a></li>
+            </ul>
+            <div class="landing-auth">
+                <button class="l-btn login-btn">Log In</button>
+                <button class="l-btn signup-btn">Sign Up</button>
+            </div>
+        </nav>
+        <div class="landing-scroll-container">
+            <div class="landing-section hero-section">
+                <div class="landing-badge"><i class="fa-solid fa-star"></i> #1 Productivity App</div>
+                <h1>Organize your life with <span class="gradient-text">TaskMaster</span></h1>
+                <p>Simplify your workflow, track your progress, and achieve your goals. The all-in-one workspace for
+                    your personal and professional life.</p>
+
+                <div class="landing-features">
+                    <div class="l-feature">
+                        <i class="fa-solid fa-list-check"></i>
+                        <span>Smart Lists</span>
+                    </div>
+                    <div class="l-feature">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span>Analytics</span>
+                    </div>
+                    <div class="l-feature">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>Focus Mode</span>
+                    </div>
+                </div>
+
+                <button id="landingBtn" class="cta-btn">Launch Workspace <i class="fa-solid fa-rocket"></i></button>
+            </div>
+
+            <div class="landing-section feature-section">
+                <div class="feature-text">
+                    <h2>Visualize Your Progress</h2>
+                    <p>Track your tasks with beautiful charts and analytics. Understand where your time goes and boost
+                        your productivity with data-driven insights. Our dashboard gives you a bird's-eye view of your
+                        accomplishments.</p>
+                </div>
+                <div class="feature-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop"
+                        alt="Analytics Dashboard">
+                </div>
+            </div>
+
+            <div class="landing-section feature-section reverse">
+                <div class="feature-text">
+                    <h2>Available Everywhere</h2>
+                    <p>Access TaskMaster on your desktop, tablet, and phone. Your tasks stay perfectly in sync across
+                        all your devices, so you can stay organized and on top of your work whether you're at your desk
+                        or on the go.</p>
+                    <div class="platform-icons">
+                        <i class="fa-brands fa-apple"></i>
+                        <i class="fa-brands fa-windows"></i>
+                        <i class="fa-brands fa-android"></i>
+                    </div>
+                </div>
+                <div class="feature-image">
+                    <img src="https://images.unsplash.com/photo-1544256718-3b62ff04b356?q=80&w=1000&auto=format&fit=crop"
+                        alt="Cross-platform devices">
+                </div>
+            </div>
+
+            <div class="landing-section feature-section">
+                <div class="feature-text">
+                    <h2>Focus on What Matters</h2>
+                    <p>Our distraction-free interface helps you get into the flow state. With features like Dark Mode
+                        and Focus Timer, you can customize your environment to suit your working style and maximize your
+                        efficiency.</p>
+                </div>
+                <div class="feature-image">
+                    <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1000&auto=format&fit=crop"
+                        alt="Focus Mode">
+                </div>
+            </div>
+        </div>
+        <footer class="landing-footer">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h4>TaskMaster</h4>
+                    <p style="line-height: 1.6; font-size: 0.9rem;">The ultimate tool to organize your life and achieve
+                        your goals.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Integrations</a></li>
+                        <li><a href="#">Updates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#" id="footerAboutBtn">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#" id="footerHelpBtn">Help Center</a></li>
+                        <li><a href="#" id="footerContactBtn">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow Us</h4>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TaskMaster. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <div class="container">
+        <!-- navbar starts -->
+        <nav>
+            <div class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></div>
+            <div class="nav-logo">
+                <i class="fa-solid fa-check-double"></i>
+                <h1><span class="logo-task">Task</span><span class="logo-master">Master</span></h1>
+            </div>
+
+            <span class="search">
+                <input type="text" id="searchInput" placeholder="Search your task here....">
+                <span class="sicon" id="searchBtn"><i class="fa fa-search"></i></span>
+                <div class="suggestions-box" id="suggestionsBox"></div>
+            </span>
+
+            <span class="ricon">
+                <span class="bell" id="notificationBtn">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-dot" id="notificationDot"></span>
+                </span>
+                <span class="calendar" id="navCalendarBtn">
+                    <i class="fa-regular fa-calendar"></i>
+                </span>
+            </span>
+
+            <span class="time">
+                <span class="day"></span>
+                <span class="date"></span>
+            </span>
+        </nav>
+
+        <!-- sidebar starts -->
+        <div class="sidebar">
+            <div class="close-sidebar-btn" id="closeSidebarBtn">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="profile"></div>
+            <div class="details">
+                <div class="name">Task</div>
+                <div class="email">Task@gmail.com</div>
+            </div>
+
+            <ul>
+                <li id="navDashboard" class="active"><i class="fa-solid fa-chart-line"></i><span>Dashboard</span></li>
+                <li id="navVital"><i class="fa-solid fa-circle-exclamation"></i><span>Vital task</span></li>
+                <li id="navToday"><i class="fa-solid fa-calendar-day"></i><span>Today's Task</span></li>
+                <li id="navCategories"><i class="fa-solid fa-list-check"></i><span>Task Categories</span></li>
+                <li id="navSettings"><i class="fa-solid fa-gear"></i><span>Settings</span></li>
+            </ul>
+
+            <div class="logout">
+                <i class="fa-solid fa-right-from-bracket"></i><span>Logout</span>
+            </div>
+
+            <div class="media">
+                <span class="yt"><a href="https://www.youtube.com/" target="_blank"><i
+                            class="fa-brands fa-youtube"></i></a></span>
+                <span class="face"><a href="https://www.facebook.com/" target="_blank"><i
+                            class="fa-brands fa-facebook"></i></a></span>
+                <span class="twitter"><a href="https://x.com/tenzin_886" target="_blank"><i
+                            class="fa-brands fa-x-twitter"></i></a></span>
+                <span class="insta"><a href="https://www.instagram.com/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a></span>
+            </div>
+        </div>
+
+        <!-- main content -->
+        <div class="main">
+            <div class="greet">
+                <h3>Welcome Back, Task</h3>
+            </div>
+
+            <div class="smart-add-container">
+                <div class="smart-add-header">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <h3>Smart Add (AI)</h3>
+                </div>
+                <div class="smart-add-input-group">
+                    <input type="text" id="smartInput" placeholder="e.g., Finish report by tomorrow !high #work">
+                    <button id="smartAddBtn" class="cta-btn">Add with AI</button>
+                </div>
+            </div>
+
+            <dashboard>
+                <div class="dashb">
+                    <!-- To-Do Section -->
+                    <div class="latest">
+                        <div class="todotext">
+                            <i class="fa-solid fa-calendar-day"></i>
+                            <h3>To-Do</h3>
+                            <button class="btn" style="margin-left: auto;"><i class="fa-solid fa-plus"></i> Add</button>
+                        </div>
+                        <div class="taskdate">
+                            <h5>20 June</h5>
+                            <i class="fa-solid fa-circle" style="font-size: 0.3rem;"></i>
+                            <h5>Today</h5>
+                        </div>
+                        <div class="todaytask"></div>
+                    </div>
+
+                    <!-- Status Section -->
+                    <div class="status">
+                        <div class="heading">
+                            <i class="fa-solid fa-clipboard-list"></i>
+                            <h3>Task Status</h3>
+                        </div>
+                        <div
+                            style="padding: 0 1.5rem; margin-top: 0.5rem; font-size: 0.8rem; color: #666; display: flex; gap: 10px; justify-content: center;">
+                            <span style="color: #10b981; font-weight: 600;">● Completed</span>
+                            <span style="color: #3b82f6; font-weight: 600;">● Pending</span>
+                            <span style="color: #ef4444; font-weight: 600;">● In Progress</span>
+                        </div>
+                        <div class="circles">
+                            <div class="comdiv">
+                                <div class="comcircle">75%</div>
+                                <div class="comtext">
+                                    <h3><span class="dot"></span>Completed</h3>
+                                </div>
+                            </div>
+                            <div class="progdiv">
+                                <div class="progcircle">86%</div>
+                                <div class="progtext">
+                                    <h3><span class="dot"></span>In Progress</h3>
+                                </div>
+                            </div>
+                            <div class="pendingdiv">
+                                <div class="pendcircle">67%</div>
+                                <div class="pendtext">
+                                    <h3><span class="dot"></span>Pending</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overall">
+                            <div class="textoverall">
+                                <h3>Overall Progress</h3>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+
+                    <!-- Completed Tasks Section -->
+                    <div class="completed">
+                        <div class="comtask">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                            <h3>Completed Tasks</h3>
+                        </div>
+                        <div class="comscroll"></div>
+                    </div>
+                </div>
+
+                <!-- Settings View (Hidden by default) -->
+                <div class="settings-view" style="display: none;">
+                    <h3>Account Preferences</h3>
+                    <div class="settings-field">
+                        <label>Name</label>
+                        <input type="text" id="settingsNameMain">
+                    </div>
+                    <div class="settings-field">
+                        <label>Email</label>
+                        <input type="email" id="settingsEmailMain">
+                    </div>
+                    <div class="settings-field">
+                        <label>Profile Picture</label>
+                        <input type="file" id="settingsProfilePicMain" accept="image/*">
+                    </div>
+                    <div class="settings-field">
+                        <label>Theme</label>
+                        <select id="settingsThemeMain">
+                            <option value="light">Light</option>
+                            <option value="dark">Dark</option>
+                        </select>
+                    </div>
+                    <button class="settings-save-btn" id="settingsSaveBtnMain">Save Changes</button>
+                </div>
+            </dashboard>
+        </div>
+    </div>
+
+    <!-- Popup -->
+    <div class="overlay" id="overlay">
+        <div class="task-box">
+            <span class="close">&times;</span>
+            <h2>Add Task</h2>
+            <div class="field">
+                <label>Task Name</label>
+                <input type="text" id="taskName" placeholder="Enter task name...">
+            </div>
+            <div class="field">
+                <label>Description</label>
+                <textarea id="taskDesc" placeholder="Add task description..."></textarea>
+            </div>
+            <div class="field">
+                <label>Due Date</label>
+                <input type="date" id="taskDate">
+            </div>
+            <div class="field">
+                <label>Category</label>
+                <select id="taskCategory">
+                    <option value="School">School</option>
+                    <option value="Work">Work</option>
+                    <option value="House">House</option>
+                    <option value="Miscellaneous">Miscellaneous</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Priority</label>
+                <select id="taskPriority">
+                    <option>Low</option>
+                    <option>Medium</option>
+                    <option>High</option>
+                </select>
+            </div>
+            <button class="submit-btn">Add Task</button>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="login-overlay" id="loginOverlay">
+        <div class="login-modal">
+            <div class="login-header">
+                <div class="login-icon"><i class="fa-solid fa-user-lock"></i></div>
+                <h3>Welcome Back</h3>
+                <p>Please enter your details to sign in.</p>
+            </div>
+            <div class="login-form-body">
+                <div class="login-field">
+                    <label>Email</label>
+                    <input type="email" id="loginEmailInput" placeholder="Enter your email">
+                </div>
+                <div class="login-field">
+                    <label>Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="loginPasswordInput" placeholder="Enter your password">
+                        <i class="fa-solid fa-eye" id="togglePassword"></i>
+                    </div>
+                    <div class="forgot-pass">
+                        <a href="#" id="forgotPassBtn">Forgot Password?</a>
+                    </div>
+                </div>
+            </div>
+            <div class="login-modal-buttons">
+                <button class="login-cancel-btn" id="loginCancelBtn">Cancel</button>
+                <button class="login-confirm-btn" id="loginConfirmBtn">Log In</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div class="delete-overlay" id="deleteOverlay">
+        <div class="delete-modal">
+            <h3>Delete Task?</h3>
+            <p>Are you sure you want to delete this task? This action cannot be undone.</p>
+            <div class="delete-modal-buttons">
+                <button class="delete-cancel-btn" id="deleteCancelBtn">Cancel</button>
+                <button class="delete-confirm-btn" id="deleteConfirmBtn">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logout Confirmation Modal -->
+    <div class="logout-overlay" id="logoutOverlay">
+        <div class="logout-modal">
+            <h3>Log Out?</h3>
+            <p>Are you sure you want to log out?</p>
+            <div class="logout-modal-buttons">
+                <button class="logout-cancel-btn" id="logoutCancelBtn">Cancel</button>
+                <button class="logout-confirm-btn" id="logoutConfirmBtn">Log Out</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Status Modal -->
+    <div class="edit-overlay" id="editOverlay">
+        <div class="edit-modal" onclick="event.stopPropagation()">
+            <h3>Edit Task Details</h3>
+            <div class="edit-status-field">
+                <label>Task Name</label>
+                <input type="text" id="editTaskName">
+            </div>
+            <div class="edit-status-field">
+                <label>Description</label>
+                <textarea id="editTaskDesc"></textarea>
+            </div>
+            <div class="edit-status-field">
+                <label>Priority</label>
+                <select id="editTaskPriority">
+                    <option>Low</option>
+                    <option>Medium</option>
+                    <option>High</option>
+                </select>
+            </div>
+            <div class="edit-status-field">
+                <label>Status</label>
+                <select id="editStatusSelect">
+                    <option value="Pending">Pending</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                </select>
+            </div>
+            <div class="edit-modal-buttons">
+                <button class="edit-cancel-btn" id="editCancelBtn" type="button">Cancel</button>
+                <button class="edit-save-btn" id="editSaveBtn" type="button">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calendar Modal -->
+    <div class="calendar-overlay" id="calendarOverlay">
+        <div class="calendar-modal">
+            <div class="calendar-header">
+                <button id="prevMonthBtn"><i class="fa-solid fa-chevron-left"></i></button>
+                <h3 id="calendarMonthYear"></h3>
+                <button id="nextMonthBtn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <div class="weekdays">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div class="calendar-days" id="calendarDays"></div>
+            <button class="close-calendar-btn" id="closeCalendarBtn">Close</button>
+        </div>
+    </div>
+
+    <!-- Notification Dropdown -->
+    <div class="notification-dropdown" id="notificationDropdown">
+        <div class="notification-header">
+            <h4>Notifications</h4>
+            <button id="clearNotificationsBtn">Clear All</button>
+        </div>
+        <div class="notification-list" id="notificationList">
+            <div class="no-notifications">No new notifications</div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="notification-toast" id="notificationToast">
+        <i class="fa-solid fa-circle-check"></i>
+        <div class="toast-content">
+            <h4>Task Completed!</h4>
+            <p id="toastMessage">You have successfully completed a task.</p>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div class="about-overlay" id="aboutOverlay">
+        <div class="about-modal">
+            <span class="close" id="closeAboutBtn">&times;</span>
+            <div class="about-content">
+                <h2>About TaskMaster</h2>
+                <h3>Our Mission: Reclaiming Your Focus in a World of Distraction</h3>
+                <p>Welcome to TaskMaster, the sanctuary for your thoughts, plans, and ambitions. In an age where digital
+                    noise is constant and the demands on our attention are relentless, we believe that clarity and focus
+                    are not just luxuries—they are necessities for a productive and fulfilling life. Our mission is
+                    simple yet profound: to provide you with a powerful, intuitive, and beautiful tool that helps you
+                    cut through the chaos, organize your world, and achieve a state of calm, focused control. We are not
+                    just building a task manager; we are crafting an ecosystem for achievement. TaskMaster is designed
+                    to be your trusted partner in turning overwhelming to-do lists into a clear, actionable path
+                    forward. We want to empower you to spend less time managing your tasks and more time actually doing
+                    them, creating, and living. Every feature, every design choice, and every line of code is dedicated
+                    to this singular goal: helping you master your day, and in turn, master your life.</p>
+                <h3>The Problem We're Passionately Solving</h3>
+                <p>Have you ever felt the weight of a dozen open tabs in your browser mirrored by a dozen open loops in
+                    your mind? Do you start your day with a clear intention, only to find yourself pulled in a hundred
+                    different directions by emails, notifications, and impromptu requests? This is the modern
+                    productivity paradox: we have more tools than ever to help us, yet we often feel more scattered and
+                    less effective. Traditional to-do lists can become graveyards for good intentions—endless,
+                    unprioritized, and disconnected from the bigger picture. They tell you <em>what</em> you need to do,
+                    but they fail to provide the context of <em>why</em> it matters or <em>how</em> it fits into your
+                    larger goals. This fragmentation leads to stress, procrastination, and a constant, nagging feeling
+                    that you're busy but not productive. We saw this struggle in ourselves and in everyone around us,
+                    from students and freelancers to entrepreneurs and parents. We knew there had to be a better way—a
+                    way to bring harmony to the discord of daily duties.</p>
+                <h3>Our Vision: A World Where Everyone Can Achieve Their Full Potential</h3>
+                <p>We envision a future where technology serves as a silent, supportive partner in human achievement. A
+                    world where your tools don't add to your cognitive load but instead lighten it, creating mental
+                    space for creativity, deep work, and meaningful connections. Our vision for TaskMaster is to be the
+                    central nervous system for your personal and professional life. We see it evolving beyond a simple
+                    list, becoming an intelligent assistant that understands your priorities, helps you schedule your
+                    time realistically, and provides gentle nudges to keep you on track. We imagine a platform that
+                    celebrates your progress, learns from your work patterns, and offers insights to help you become
+                    more effective over time. Ultimately, we are striving to build a tool so seamlessly integrated into
+                    your workflow that it feels like an extension of your own mind—a tool that empowers millions of
+                    people to not only get more done but to do their best, most important work with confidence and peace
+                    of mind.</p>
+                <h3>The TaskMaster Philosophy: Our Guiding Principles</h3>
+                <p><strong>Simplicity and Power:</strong> We believe that the most powerful tools are often the simplest
+                    to use. We are obsessed with removing friction and complexity from our interface. Every feature is
+                    carefully considered and designed to be intuitive from the first click. We hide complexity, offering
+                    powerful capabilities like advanced filtering, categorization, and progress tracking without
+                    cluttering your workspace. You should feel empowered, not overwhelmed.</p>
+                <p><strong>Focus and Flow:</strong> Your attention is your most valuable resource. TaskMaster is
+                    designed to be a "calm" application. We minimize distracting notifications and unnecessary visual
+                    noise. The dashboard, the task views, and the input forms are all crafted to help you concentrate on
+                    the task at hand, encouraging a state of "flow" where you are fully immersed and productive.</p>
+                <p><strong>Flexibility and Structure:</strong> We understand that no two people work the same way.
+                    TaskMaster provides a flexible framework that can adapt to your personal workflow, whether you're a
+                    fan of GTD (Getting Things Done), the Eisenhower Matrix, or your own unique system. Use categories,
+                    priorities, and due dates to create the structure that works for you, from simple daily lists to
+                    complex, multi-stage projects.</p>
+                <p><strong>Beauty and Satisfaction:</strong> We believe that the tools you use every day should be a
+                    pleasure to interact with. A well-designed interface can inspire and motivate. From the smooth
+                    animations to the satisfying check of a completed task, we've poured our hearts into making
+                    TaskMaster a visually pleasing and emotionally rewarding experience. Completing your work should
+                    feel good, and your task manager should reflect that.</p>
+                <h3>Our Story: From a Personal Problem to a Public Passion</h3>
+                <p>TaskMaster wasn't born in a boardroom; it was born from a cluttered desk and a frustrated mind. Our
+                    founder, a software developer juggling a demanding job, a side hustle, and a growing family, found
+                    himself drowning in a sea of sticky notes, digital reminders, and spreadsheet-based to-do lists.
+                    None of the existing solutions felt right. Some were too simplistic, others were bloated with
+                    features he'd never use, and all of them seemed to add another layer of management to his already
+                    busy day. One weekend, fueled by coffee and a desire for order, he began coding a simple, personal
+                    dashboard. It had one goal: to show him exactly what he needed to do <em>today</em> and how it
+                    connected to his weekly goals. He focused on a clean interface that was quick and satisfying to use.
+                    He shared the early prototype with a few friends and colleagues, and their reaction was immediate
+                    and enthusiastic. They felt the same pain and saw the same promise. That personal project quickly
+                    grew into a passion. A small, dedicated team of designers and engineers came together, united by the
+                    shared mission of building the task manager they had always wanted for themselves. We spent
+                    countless hours refining the user experience, debating the merits of every feature, and writing code
+                    that was as clean and efficient as the interface it powered. TaskMaster is the result of that
+                    journey—a tool built with love, care, and a deep understanding of the challenges of modern work.
+                    It's a product for us, by us, and now, for you. We are immensely proud of what we've built, and we
+                    are just getting started. Thank you for being a part of our story.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="contact-overlay" id="contactOverlay">
+        <div class="contact-modal">
+            <span class="close" id="closeContactBtn">&times;</span>
+            <div class="contact-content">
+                <h2>Get in Touch</h2>
+                <p style="text-align: center; margin-bottom: 2rem; color: #666;">We'd love to hear from you. Here's how
+                    you can reach us.</p>
+
+                <div class="contact-grid">
+                    <div class="contact-details">
+                        <div class="c-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div class="c-text">
+                                <h4>Email Us</h4>
+                                <p>support@taskmaster.com</p>
+                            </div>
+                        </div>
+                        <div class="c-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div class="c-text">
+                                <h4>Call Us</h4>
+                                <p>+1 (555) 123-4567</p>
+                                <p>+1 (555) 987-6543</p>
+                            </div>
+                        </div>
+                        <div class="c-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div class="c-text">
+                                <h4>Visit Us</h4>
+                                <p>Task Master Office, Modern Village, Bareilly, Uttar Pradesh, 243001, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-images">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000&auto=format&fit=crop"
+                            alt="Office">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop"
+                            alt="Team">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=600&auto=format&fit=crop"
+                            alt="Meeting">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div class="help-overlay" id="helpOverlay">
+        <div class="help-modal">
+            <span class="close" id="closeHelpBtn">&times;</span>
+            <div class="help-content">
+                <h2>Help & Support</h2>
+                <div class="help-search">
+                    <input type="text" placeholder="Search for help articles...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <div class="faq-section">
+                    <h3>Frequently Asked Questions</h3>
+                    <div class="faq-item">
+                        <h4>How do I reset my password?</h4>
+                        <p>You can reset your password by clicking on "Forgot Password?" on the login screen.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Is TaskMaster free?</h4>
+                        <p>Yes, TaskMaster is completely free to use for personal task management.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>How do I delete a task?</h4>
+                        <p>Click the trash icon on the task card you wish to remove.</p>
+                    </div>
+                </div>
+
+                <div class="chat-section">
+                    <h3>Still need help?</h3>
+                    <p>Our support team is available 24/7 to assist you.</p>
+                    <button class="start-chat-btn" id="startChatBtn"><i class="fa-solid fa-comments"></i> Chat with
+                        Us</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+
+</html>
